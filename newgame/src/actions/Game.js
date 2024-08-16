@@ -1,42 +1,48 @@
+export const SET_INPUT_NUMBER = 'SET_INPUT_NUMBER';
+export const START_GAME = 'START_GAME';
+export const CLICK_CIRCLE = 'CLICK_CIRCLE';
+export const STOP_GAME = 'STOP_GAME';
+export const RESET_GAME = 'RESET_GAME';
+export const INCREMENT_TIME = 'INCREMENT_TIME';
+export const REMOVE_CIRCLE = 'REMOVE_CIRCLE';
+export const GAME_OVER = 'GAME_OVER';
+export const CLEAR_ALL = 'CLEAR_ALL';
 
-
-// Action Types
-export const SET_POINTS = 'SET_POINTS';
-export const GENERATE_BALLS = 'GENERATE_BALLS';
-export const REMOVE_BALL = 'REMOVE_BALL';
-export const RESTART_GAME = 'RESTART_GAME';
-
-export const SET_TIME = 'SET_TIME';
-export const TIME_UP = 'TIME_UP';
-export const SET_GAME_STATUS='SET_GAME_STATUS'
-
-export const setTime = (time) => ({
-    type: SET_TIME,
-    time
-});
-export const setGameStatus = (status) => ({
-    type: SET_GAME_STATUS,
-    payload: status,
+export const setInputNumber = (number) => ({
+  type: SET_INPUT_NUMBER,
+  payload: number,
 });
 
-export const timeUp = () => ({
-    type: TIME_UP
+export const startGame = () => ({
+  type: START_GAME,
 });
 
-export const setPoints = (points) => ({
-    type: SET_POINTS,
-    points
+export const clickCircle = (id) => ({
+  type: CLICK_CIRCLE,
+  payload: id,
 });
 
-export const generateBalls = (balls) => ({
-    type: GENERATE_BALLS,
-    payload: balls // Gửi danh sách bóng có ID
+export const stopGame = () => ({
+  type: STOP_GAME,
 });
 
-export const removeBall = (id) => ({
-    type: REMOVE_BALL,
-    id
+export const resetGame = () => ({
+  type: RESET_GAME,
 });
-export const restartGame = () => ({
-    type: RESTART_GAME
+
+export const incrementTime = () => ({
+  type: INCREMENT_TIME,
+});
+
+export const removeCircle = (id) => ({
+  type: REMOVE_CIRCLE,
+  payload: id,
+});
+
+export const gameOver = () => ({
+  type: GAME_OVER,
+});
+
+export const clearAll = () => ({
+  type: CLEAR_ALL,
 });
